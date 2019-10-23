@@ -119,9 +119,33 @@ public class StringsAndThings {
  * gHappy("xxgxx") // Should return  false
  * gHappy("xxggyygxx") // Should return  false
  */
-public Boolean gIsHappy(String input){
-        return null;
+public Boolean gIsHappy(String input) {
+
+
+    char[] inputArray = input.toCharArray();
+    Boolean gBack;
+    Boolean gForward;
+    Boolean gHappy = false;
+
+
+    for (int i = 0; i < inputArray.length; i++) {
+        if (inputArray[i] == 'g' && inputArray[i - 1] == 'g') {
+            gHappy = true;
+        } else if (inputArray[i] == 'g' && inputArray[i + 1] == 'g') {
+            gHappy = true;
         }
+        else if (inputArray[i] == 'g')
+        {
+            gHappy = false;
+        }
+    }
+    return gHappy;
+}
+
+
+
+
+
 
 
 /**
@@ -134,4 +158,8 @@ public Boolean gIsHappy(String input){
 public Integer countTriple(String input){
         return null;
         }
-        }
+
+
+
+
+}
