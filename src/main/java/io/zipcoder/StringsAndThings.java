@@ -1,10 +1,14 @@
 package io.zipcoder;
 
-
+import java.util.HashMap;
+import java.util.Map;
+import java.lang.String;
+import java.lang.StringBuilder;
 /**
  * @author tariq
  */
 public class StringsAndThings {
+
 
     /**
      * Given a string, count the number of words ending in 'y' or 'z' -- so the 'y' in "heavy" and the 'z' in "fez" count,
@@ -14,8 +18,19 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
-    public Integer countYZ(String input){
-        return null;
+    public Integer countYZ(String input)
+    {
+        int counter = 0;
+        String[] inputArray = input.split(" ");
+        for( String s : inputArray)     //for (i=0; i<
+        {
+            //int lastLetter = s.length()-1;
+            char lastLetter = s.charAt(s.length()-1);
+            if (lastLetter == 'y'  || lastLetter == 'z') {
+                counter++;
+            }
+        }
+    return counter;
     }
 
     /**
