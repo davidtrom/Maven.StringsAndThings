@@ -144,10 +144,6 @@ public Boolean gIsHappy(String input) {
 
 
 
-
-
-
-
 /**
  * We'll say that a "triple" in a string is a char appearing three times in a row.
  * Return the number of triples in the given string. The triples may overlap.
@@ -156,10 +152,21 @@ public Boolean gIsHappy(String input) {
  *            countTriple("a") // Should return 0
  */
 public Integer countTriple(String input){
-        return null;
+
+    int counter= 0;
+    String allLowers = input.toLowerCase();
+    char[] charArray = input.toCharArray();
+    //int length = charArray.length;
+  for (int i = 0; i < charArray.length-1; i++)
+    {
+        //char checkChar = charArray[i];
+        if (charArray[i] == charArray[i+1] && charArray[i] == charArray[i+2] )
+        {
+            counter++;
         }
-
-
-
-
+    }
+        return counter;
+        }
 }
+
+
